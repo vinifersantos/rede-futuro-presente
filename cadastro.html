@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Apoiadores | Rede Futuro Presente</title>
+</head>
+<body>
+    <header>
+        <h1>Rede Futuro Presente</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="cadastro.html" aria-current="page">Contribua</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="titulo-cadastro">
+            <h2 id="titulo-cadastro">Cadastro de apoiadores</h2>
+            <p>Preencha o formulário para fazer uma doação, participar como voluntário ou contribuir das duas formas.</p>
+            <p>Os campos marcados com * são obrigatórios.</p>
+
+            <!-- O destino deve ser atualizado quando o projeto possuir um servidor. -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+                    <p>
+                        <label for="nome-completo">Nome completo *</label><br>
+                        <input type="text" id="nome-completo" name="nomeCompleto" autocomplete="name" minlength="3" maxlength="100" required>
+                    </p>
+                    <p>
+                        <label for="data-nascimento">Data de nascimento *</label><br>
+                        <input type="date" id="data-nascimento" name="dataNascimento" autocomplete="bday" required>
+                    </p>
+                    <p>
+                        <label for="whatsapp">WhatsApp *</label><br>
+                        <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" pattern="[0-9()+ -]{10,20}" maxlength="20" placeholder="(11) 99999-9999" title="Digite um telefone com DDD." required>
+                    </p>
+                    <p>
+                        <label for="email">E-mail *</label><br>
+                        <input type="email" id="email" name="email" autocomplete="email" maxlength="120" placeholder="nome@exemplo.com" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <p>
+                        <label for="cep">CEP *</label><br>
+                        <input type="text" id="cep" name="cep" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" placeholder="00000-000" title="Digite o CEP com oito números." required>
+                    </p>
+                    <p>
+                        <label for="logradouro">Logradouro *</label><br>
+                        <input type="text" id="logradouro" name="logradouro" autocomplete="address-line1" maxlength="120" placeholder="Rua, avenida ou travessa" required>
+                    </p>
+                    <p>
+                        <label for="numero">Número *</label><br>
+                        <input type="text" id="numero" name="numero" maxlength="10" placeholder="Ex.: 120 ou s/n" required>
+                    </p>
+                    <p>
+                        <label for="complemento">Complemento</label><br>
+                        <input type="text" id="complemento" name="complemento" autocomplete="address-line2" maxlength="60" placeholder="Apartamento, bloco ou referência">
+                    </p>
+                    <p>
+                        <label for="bairro">Bairro *</label><br>
+                        <input type="text" id="bairro" name="bairro" maxlength="80" required>
+                    </p>
+                    <p>
+                        <label for="cidade">Cidade *</label><br>
+                        <input type="text" id="cidade" name="cidade" autocomplete="address-level2" maxlength="80" required>
+                    </p>
+                    <p>
+                        <label for="estado">Estado *</label><br>
+                        <select id="estado" name="estado" autocomplete="address-level1" required>
+                            <option value="">Selecione</option>
+                            <option value="AC">Acre</option><option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option><option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option><option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option><option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option><option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option><option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option><option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option><option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option><option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Forma de contribuição *</legend>
+                    <p>Escolha uma opção:</p>
+                    <p><input type="radio" id="contribuicao-doacao" name="formaContribuicao" value="doacao" required> <label for="contribuicao-doacao">Quero fazer uma doação</label></p>
+                    <p><input type="radio" id="contribuicao-voluntariado" name="formaContribuicao" value="voluntariado"> <label for="contribuicao-voluntariado">Quero ser voluntário</label></p>
+                    <p><input type="radio" id="contribuicao-ambas" name="formaContribuicao" value="doacao-e-voluntariado"> <label for="contribuicao-ambas">Quero doar e ser voluntário</label></p>
+                </fieldset>
+
+                <fieldset aria-describedby="orientacao-voluntariado">
+                    <legend>Informações sobre voluntariado</legend>
+                    <p id="orientacao-voluntariado">Preencha este grupo caso tenha escolhido voluntariado.</p>
+                    <p>Em quais áreas você gostaria de ajudar?</p>
+                    <p><input type="checkbox" id="area-mentoria" name="areasVoluntariado" value="mentoria-programacao"> <label for="area-mentoria">Mentoria em lógica e programação</label></p>
+                    <p><input type="checkbox" id="area-manutencao" name="areasVoluntariado" value="manutencao-computadores"> <label for="area-manutencao">Manutenção de computadores</label></p>
+                    <p><input type="checkbox" id="area-eventos" name="areasVoluntariado" value="organizacao-eventos"> <label for="area-eventos">Organização de eventos</label></p>
+                    <p><input type="checkbox" id="area-digital" name="areasVoluntariado" value="servicos-digitais"> <label for="area-digital">Serviços digitais</label></p>
+                    <p>
+                        <label for="ajuda-digital">Como você pretende ajudar com serviços digitais?</label><br>
+                        <textarea id="ajuda-digital" name="ajudaDigital" rows="4" maxlength="500" placeholder="Conte quais conhecimentos ou serviços você pode oferecer."></textarea>
+                    </p>
+                    <p>Qual é a sua disponibilidade?</p>
+                    <p><input type="checkbox" id="dias-uteis" name="disponibilidade" value="dias-uteis"> <label for="dias-uteis">Dias úteis</label></p>
+                    <p><input type="checkbox" id="finais-semana" name="disponibilidade" value="finais-de-semana"> <label for="finais-semana">Finais de semana</label></p>
+                    <p><input type="checkbox" id="horario-flexivel" name="disponibilidade" value="horario-flexivel"> <label for="horario-flexivel">Horário flexível</label></p>
+                    <p>Como você prefere participar?</p>
+                    <p><input type="radio" id="participacao-presencial" name="formatoParticipacao" value="presencial"> <label for="participacao-presencial">Presencialmente</label></p>
+                    <p><input type="radio" id="participacao-remota" name="formatoParticipacao" value="remoto"> <label for="participacao-remota">Remotamente</label></p>
+                    <p><input type="radio" id="participacao-ambas" name="formatoParticipacao" value="presencial-e-remoto"> <label for="participacao-ambas">Das duas formas</label></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Origem e motivação</legend>
+                    <p>
+                        <label for="origem-contato">Como você conheceu a organização? *</label><br>
+                        <select id="origem-contato" name="origemContato" required>
+                            <option value="">Selecione</option>
+                            <option value="google">Google</option><option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option><option value="indicacao">Indicação de alguém</option>
+                            <option value="evento">Evento</option><option value="outro">Outro</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="motivacao">O que motivou você a contribuir com a organização? *</label><br>
+                        <textarea id="motivacao" name="motivacao" rows="5" minlength="10" maxlength="500" placeholder="Conte brevemente o que motivou sua decisão." required></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Consentimentos</legend>
+                    <p><input type="checkbox" id="consentimento-dados" name="consentimentoDados" value="aceito" required> <label for="consentimento-dados">Estou ciente do uso dos meus dados para o atendimento deste cadastro. *</label></p>
+                    <p><input type="checkbox" id="consentimento-marketing" name="consentimentoMarketing" value="aceito"> <label for="consentimento-marketing">Quero receber novidades e campanhas por e-mail.</label></p>
+                </fieldset>
+
+                <p><button type="submit">Enviar cadastro</button></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Rede Futuro Presente. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
+
